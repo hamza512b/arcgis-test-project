@@ -1,0 +1,33 @@
+@import "@arcgis/core/assets/esri/css/main.css";
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+@mixin button($color, $bg) {
+  padding: 1rem 3rem;
+  border-radius: 5px;
+  background-color: $bg;
+  color: $color;
+  border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0px 4px transparentize($bg, $amount: 0.4);
+  }
+}
+
+.btn-danger {
+  @include button(white, hsl(0, 50%, 62%));
+}
+
+.btn-secondary {
+  @include button(black, hsl(235, 75%, 96%));
+}
+
+
+.map {
+    width: 100vw;
+    height: 500px;
+}
